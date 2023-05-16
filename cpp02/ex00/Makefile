@@ -6,7 +6,7 @@
 #    By: wxuerui <wangxuerui2003@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/16 13:12:40 by wxuerui           #+#    #+#              #
-#    Updated: 2023/05/16 13:58:16 by wxuerui          ###   ########.fr        #
+#    Updated: 2023/05/16 14:05:55 by wxuerui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,3 +23,13 @@ all:	$(NAME)
 
 $(NAME):	$(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+
+clean:
+	rm -f $(OBJS)
+
+fclean:	clean
+	rm -f $(NAME)
+
+re:	fclean all
+
+.PHONY: all $(NAME) clean fclean re
