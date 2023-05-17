@@ -6,7 +6,7 @@
 /*   By: wxuerui <wangxuerui2003@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:32:01 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/16 19:02:58 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/17 14:14:12 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ bool	bsp(Point const a, Point const b, Point const c, Point const point) {
 	cy = c.getY();
 	py = point.getY();
 
-
+	// https://www.youtube.com/watch?v=HYAgJN3x4GA
 	w1 = ((ax * (cy - ay)) + ((py - ay) * (cx - ax)) - (px * (cy - ay))) / (((by - ay) * (cx - ax)) - ((bx - ax) * (cy - ay)));
 	w2 = (py - ay - w1 * (by - ay)) / (cy - ay);
 	// std::cout << w1 << std::endl << w2 << std::endl;
