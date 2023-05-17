@@ -1,0 +1,119 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wxuerui <wangxuerui2003@gmail.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/17 14:18:51 by wxuerui           #+#    #+#             */
+/*   Updated: 2023/05/17 15:32:27 by wxuerui          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ClapTrap.hpp"
+#include "colors.h"
+
+ClapTrap::ClapTrap() {
+	std::cout << "Default constructor called" << std::endl;
+	return;
+}
+
+ClapTrap::ClapTrap(const std::string& name) : _name(name), _hp(10), _ep(10), _ad(0) {
+	std::cout << GREEN << "Name constructor for " << name << " called" << RESET << std::endl;
+	return;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& copy) {
+	std::cout << BLUE << "Copy constructor called" << RESET << std::endl;
+	this->_name = copy._name;
+	this->_hp = copy._hp;
+	this->_ep = copy._ep;
+	this->_ad = copy._ad;
+	return;
+}
+
+ClapTrap&	ClapTrap::operator=(const ClapTrap& copy) {
+	std::cout << BLUE << "Copy assignment operator called" << RESET << std::endl;
+	this->_name = copy._name;
+	this->_hp = copy._hp;
+	this->_ep = copy._ep;
+	this->_ad = copy._ad;
+	return *this;
+}
+
+ClapTrap::~ClapTrap() {
+	std::cout << RED << this->_name << "'s Destructor called" << RESET << std::endl;
+	return;
+}
+
+void	ClapTrap::attack(const std::string& target) {
+	if (this->_hp == 0) {
+		std::cout << RED << "ClapTrap " << this->_name << " died. Stop acting." << RESET << std::endl;
+		return;
+	} else if (this->_ep == 0) {
+		std::cout << CYAN << "ClapTrap " << this->_name << " is out of energy points." << RESET << std::endl;
+		return;
+	}
+
+	std::cout << BLUE << "ClapTrap " << this->_name << " attacks " << target
+		<< ", causing " << this->_ad << " points of damage!"
+		<< RESET << std::endl;
+
+	this->_ep--;
+}
+
+void	ClapTrap::takeDamage(unsigned int amount) {
+	if (this->_hp == 0) {
+		std::cout << RED << "ClapTrap " << this->_name << " died. Stop acting." << RESET << std::endl;
+		return;
+	}
+
+	if (amount >= this->_hp) {
+		this->_hp = 0;
+		std::cout << RED << "ClapTrap " << this->_name << " died." << RESET << std::endl;
+	} else {
+		this->_hp -= amount;
+	}
+	
+	std::cout << MAGENTA << "ClapTrap " << this->_name << " took " << amount << " points of damage! "
+		<< this->_hp << " hp points left for " << this->_name << "!"
+		<< RESET << std::endl;
+}
+
+void	ClapTrap::beRepaired(unsigned int amount) {
+	if (this->_hp == 0) {
+		std::cout << RED << "ClapTrap " << this->_name << " died. Stop acting." << RESET << std::endl;
+		return;
+	} else if (this->_ep == 0) {
+		std::cout << CYAN << "ClapTrap " << this->_name << " is out of energy points." << RESET << std::endl;
+		return;
+	}
+	
+	this->_hp += amount;
+	this->_ep--;
+	
+	std::cout << YELLOW << "ClapTrap " << this->_name << " repaired " << amount << " points of hp!" << RESET << std::endl;
+}
+
+const std::string&	ClapTrap::getName(void) const {
+	return this->_name;
+}
+
+unsigned int	ClapTrap::getHp(void) const {
+	return this->_hp;
+}
+
+unsigned int	ClapTrap::getEp(void) const {
+	return this->_ep;
+}
+
+unsigned int	ClapTrap::getAd(void) const {
+	return this->_ad;
+}
+
+void	ClapTrap::setAd(unsigned int ad) {
+	this->_ad = ad;
+}
+void				ClapTrap::setName(const std::string& name) {
+	this->_name = name;
+}
