@@ -1,6 +1,6 @@
-.vscode/
-*.o
+# all executable
+[^\.]*
 
-#cpp02
-fixed
-bsp
+*.o
+*.pdf
+.vscode/
