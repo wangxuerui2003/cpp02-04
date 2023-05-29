@@ -6,7 +6,7 @@
 /*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 14:05:12 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/29 14:45:55 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/29 15:28:18 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 
 		using ScavTrap::attack;
 		void	whoAmI(void);
+
+		unsigned int	getAd(void);
+		unsigned int	getEp(void);
 	
 	private:
 		std::string	_name;

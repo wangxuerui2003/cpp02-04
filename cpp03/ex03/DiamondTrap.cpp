@@ -6,7 +6,7 @@
 /*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 14:36:52 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/29 14:57:35 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/29 15:28:36 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,12 @@ void	DiamondTrap::whoAmI(void) {
 	std::cout << GREEN << "My name is " << this->_name
 			<< " and my ClapTrap name is " << ClapTrap::_name
 			<< std::endl;
+}
+
+unsigned int	DiamondTrap::getAd(void) {
+	return this->_ad;
+}
+
+unsigned int	DiamondTrap::getEp(void) {
+	return this->_ep;
 }

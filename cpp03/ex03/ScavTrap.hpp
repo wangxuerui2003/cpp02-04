@@ -6,7 +6,7 @@
 /*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:02:51 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/29 15:14:09 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/29 15:20:39 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,6 @@ class ScavTrap : virtual public ClapTrap {
 		void	guardGate(void);
 	
 	protected:
-		std::string		_name;
-		unsigned int	_hp;
-		unsigned int	_ep;
-		unsigned int	_ad;
 		int		_isGatekeeperMode;
 };
 

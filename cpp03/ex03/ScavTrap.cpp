@@ -6,18 +6,25 @@
 /*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:11:37 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/29 15:13:39 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/29 15:22:46 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : _hp(100), _ep(50), _ad(20), _isGatekeeperMode(0) {
+ScavTrap::ScavTrap() {
 	std::cout << "ScavTrap default constructor called." << std::endl;
+	this->_hp = 100;
+	this->_ep = 50;
+	this->_ad = 20;
 	return;
 }
 
-ScavTrap::ScavTrap(const std::string& name) : _name(name), _hp(100), _ep(50), _ad(20), _isGatekeeperMode(0) {
+ScavTrap::ScavTrap(const std::string& name) {
+	this->_name = name;
+	this->_hp = 100;
+	this->_ep = 50;
+	this->_ad = 20;
 	std::cout << "ScavTrap name constructor called." << std::endl;
 	return;
 }

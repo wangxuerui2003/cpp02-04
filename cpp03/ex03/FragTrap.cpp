@@ -6,19 +6,26 @@
 /*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:42:02 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/29 15:12:45 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/29 15:27:36 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : _hp(100), _ep(100), _ad(30) {
+FragTrap::FragTrap() {
 	std::cout << "FragTrap default constructor called." << std::endl;
+	this->_hp = 100;
+	this->_ep = 100;
+	this->_ad = 30;
 	return;
 }
 
-FragTrap::FragTrap(const std::string& name) : _name(name), _hp(100), _ep(100), _ad(30) {
+FragTrap::FragTrap(const std::string& name) {
 	std::cout << "FragTrap name constructor called." << std::endl;
+	this->_name = name;
+	this->_hp = 100;
+	this->_ep = 100;
+	this->_ad = 30;
 	return;
 }
 

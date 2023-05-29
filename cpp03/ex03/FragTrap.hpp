@@ -6,7 +6,7 @@
 /*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:43:03 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/29 15:02:32 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/29 15:21:06 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,6 @@ class FragTrap : virtual public ClapTrap {
 		void	highFivesGuys(void);
 
 	protected:
-		std::string		_name;
-		unsigned int	_hp;
-		unsigned int	_ep;
-		unsigned int	_ad;
 
 };
 
