@@ -6,7 +6,7 @@
 /*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:11:37 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/29 10:49:33 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/29 10:29:37 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,5 @@ void	ScavTrap::guardGate(void) {
 		return;
 	}
 	this->_isGatekeeperMode = 1;
-	std::cout << YELLOW << this->_name << " is now in gate keeper mode." << RESET << std::endl;
+	std::cout << YELLOW << this->_name << " is now in gate keeper mode." << std::endl;
 }

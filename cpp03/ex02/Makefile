@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wxuerui <wangxuerui2003@gmail.com>         +#+  +:+       +#+         #
+#    By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/16 13:12:40 by wxuerui           #+#    #+#              #
-#    Updated: 2023/05/17 14:46:57 by wxuerui          ###   ########.fr        #
+#    Updated: 2023/05/29 10:38:34 by wxuerui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	claptrap
+NAME	=	fragtrap
 CXX		=	c++
 CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98
 SRCS	=	$(wildcard *.cpp)
