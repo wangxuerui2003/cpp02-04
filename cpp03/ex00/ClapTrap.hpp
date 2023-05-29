@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wxuerui <wangxuerui2003@gmail.com>         +#+  +:+       +#+        */
+/*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 14:18:56 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/17 15:08:58 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/29 09:49:38 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,6 @@ class ClapTrap {
 		void	attack(const std::string& target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
-
-		const std::string&	getName(void) const;
-		unsigned int		getHp(void) const;
-		unsigned int		getEp(void) const;
-		unsigned int		getAd(void) const;
-		void				setAd(unsigned int ad);
-		void				setName(const std::string& name);
 
 	private:
 		std::string		_name;

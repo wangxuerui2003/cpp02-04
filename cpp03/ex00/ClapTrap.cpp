@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wxuerui <wangxuerui2003@gmail.com>         +#+  +:+       +#+        */
+/*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 14:18:51 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/17 15:32:27 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/29 09:49:32 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,27 +93,4 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 	this->_ep--;
 	
 	std::cout << YELLOW << "ClapTrap " << this->_name << " repaired " << amount << " points of hp!" << RESET << std::endl;
-}
-
-const std::string&	ClapTrap::getName(void) const {
-	return this->_name;
-}
-
-unsigned int	ClapTrap::getHp(void) const {
-	return this->_hp;
-}
-
-unsigned int	ClapTrap::getEp(void) const {
-	return this->_ep;
-}
-
-unsigned int	ClapTrap::getAd(void) const {
-	return this->_ad;
-}
-
-void	ClapTrap::setAd(unsigned int ad) {
-	this->_ad = ad;
-}
-void				ClapTrap::setName(const std::string& name) {
-	this->_name = name;
 }
