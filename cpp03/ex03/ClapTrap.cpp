@@ -6,19 +6,19 @@
 /*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 14:18:51 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/29 10:19:38 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/29 15:19:01 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "colors.h"
 
-ClapTrap::ClapTrap() {
+ClapTrap::ClapTrap() : _name("default_clap_name"), _hp(10), _ep(10), _ad(0) {
 	std::cout << "ClapTrap default constructor called" << std::endl;
 	return;
 }
 
-ClapTrap::ClapTrap(const std::string& name) : _name(name), _hp(10), _ep(10), _ad(0) {
+ClapTrap::ClapTrap(const std::string& name) : _name(name + "_clap_name"), _hp(10), _ep(10), _ad(0) {
 	std::cout << "ClapTrap name constructor for " << name << " called" << RESET << std::endl;
 	return;
 }
@@ -48,14 +48,14 @@ ClapTrap::~ClapTrap() {
 
 void	ClapTrap::attack(const std::string& target) {
 	if (this->_hp == 0) {
-		std::cout << RED << "ClapTrap " << this->_name << " died. Stop acting." << RESET << std::endl;
+		std::cout << RED << this->_name << " died. Stop acting." << RESET << std::endl;
 		return;
 	} else if (this->_ep == 0) {
-		std::cout << CYAN << "ClapTrap " << this->_name << " is out of energy points." << RESET << std::endl;
+		std::cout << CYAN << this->_name << " is out of energy points." << RESET << std::endl;
 		return;
 	}
 
-	std::cout << BLUE << "ClapTrap " << this->_name << " attacks " << target
+	std::cout << BLUE << this->_name << " attacks " << target
 		<< ", causing " << this->_ad << " points of damage!"
 		<< RESET << std::endl;
 
@@ -64,33 +64,33 @@ void	ClapTrap::attack(const std::string& target) {
 
 void	ClapTrap::takeDamage(unsigned int amount) {
 	if (this->_hp == 0) {
-		std::cout << RED << "ClapTrap " << this->_name << " died. Stop acting." << RESET << std::endl;
+		std::cout << RED << this->_name << " died. Stop acting." << RESET << std::endl;
 		return;
 	}
 
 	if (amount >= this->_hp) {
 		this->_hp = 0;
-		std::cout << RED << "ClapTrap " << this->_name << " died." << RESET << std::endl;
+		std::cout << RED << this->_name << " died." << RESET << std::endl;
 	} else {
 		this->_hp -= amount;
 	}
 	
-	std::cout << MAGENTA << "ClapTrap " << this->_name << " took " << amount << " points of damage! "
+	std::cout << MAGENTA << this->_name << " took " << amount << " points of damage! "
 		<< this->_hp << " hp points left for " << this->_name << "!"
 		<< RESET << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount) {
 	if (this->_hp == 0) {
-		std::cout << RED << "ClapTrap " << this->_name << " died. Stop acting." << RESET << std::endl;
+		std::cout << RED << this->_name << " died. Stop acting." << RESET << std::endl;
 		return;
 	} else if (this->_ep == 0) {
-		std::cout << CYAN << "ClapTrap " << this->_name << " is out of energy points." << RESET << std::endl;
+		std::cout << CYAN << this->_name << " is out of energy points." << RESET << std::endl;
 		return;
 	}
 	
 	this->_hp += amount;
 	this->_ep--;
 	
-	std::cout << YELLOW << "ClapTrap " << this->_name << " repaired " << amount << " points of hp!" << RESET << std::endl;
+	std::cout << YELLOW << this->_name << " repaired " << amount << " points of hp!" << RESET << std::endl;
 }

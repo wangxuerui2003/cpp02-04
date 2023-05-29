@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wxuerui <wangxuerui2003@gmail.com>         +#+  +:+       +#+         #
+#    By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/16 13:12:40 by wxuerui           #+#    #+#              #
-#    Updated: 2023/05/17 14:46:57 by wxuerui          ###   ########.fr        #
+#    Updated: 2023/05/29 14:47:23 by wxuerui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	claptrap
+NAME	=	diamondtrap
 CXX		=	c++
-CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98
+CXXFLAGS	=	-Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98
 SRCS	=	$(wildcard *.cpp)
 OBJS	=	$(SRCS:.cpp=.o)
 

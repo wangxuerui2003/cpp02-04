@@ -6,59 +6,49 @@
 /*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 14:47:00 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/29 09:57:24 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/29 14:45:04 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "DiamondTrap.hpp"
 
-#define ATTACK_DAMAGE 0
+#define ATTACK_DAMAGE 30
 
 int	main(void) {
-	ClapTrap	ct1("ct1"), ct2("ct2");
+	DiamondTrap	dt1("dt1"), dt2("dt2");
 
-	ct1.attack("ct2");
-	ct2.takeDamage(ATTACK_DAMAGE);
-	ct2.beRepaired(2);
-	ct2.attack("ct1");
-	ct1.takeDamage(ATTACK_DAMAGE);
-	ct1.beRepaired(2);
+	dt1.attack("dt2");
+	dt2.takeDamage(ATTACK_DAMAGE);
+	dt2.beRepaired(2);
+	dt2.attack("dt1");
+	dt1.takeDamage(ATTACK_DAMAGE);
+	dt1.beRepaired(2);
 
-	ct1.attack("ct2");
-	ct2.takeDamage(ATTACK_DAMAGE);
-	ct2.beRepaired(2);
-	ct2.attack("ct1");
-	ct1.takeDamage(ATTACK_DAMAGE);
-	ct1.beRepaired(2);
+	dt1.attack("dt2");
+	dt2.takeDamage(ATTACK_DAMAGE);
+	dt2.beRepaired(2);
+	dt2.attack("dt1");
+	dt1.takeDamage(ATTACK_DAMAGE);
+	dt1.beRepaired(2);
+
+	dt1.highFivesGuys();
+	dt2.highFivesGuys();
 	
 
-	// Tests for using up energy points
+	// Tests for killing a Diamond
 
-	// ct1.attack("ct2");
-	// ct2.takeDamage(ATTACK_DAMAGE);
-	// ct2.beRepaired(2);
-	// ct2.attack("ct1");
-	// ct1.takeDamage(ATTACK_DAMAGE);
-	// ct1.beRepaired(2);
+	// dt1.attack("dt2");
+	// dt2.takeDamage(ATTACK_DAMAGE);
+	// dt2.beRepaired(2);
+	// dt2.attack("dt1");
+	// dt1.takeDamage(ATTACK_DAMAGE);
+	// dt1.beRepaired(2);
 
-	// ct1.attack("ct2");
-	// ct2.takeDamage(ATTACK_DAMAGE);
-	// ct2.beRepaired(2);
-	// ct2.attack("ct1");
-	// ct1.takeDamage(ATTACK_DAMAGE);
-	// ct1.beRepaired(2);
+	// dt1.attack("dt2");
+	// dt2.takeDamage(ATTACK_DAMAGE);
+	// dt2.beRepaired(2);
+	// dt2.attack("dt1");
+	// dt1.takeDamage(ATTACK_DAMAGE);
+	// dt1.beRepaired(2);
 
-	// ct1.attack("ct2");
-	// ct2.takeDamage(ATTACK_DAMAGE);
-	// ct2.beRepaired(2);
-	// ct2.attack("ct1");
-	// ct1.takeDamage(ATTACK_DAMAGE);
-	// ct1.beRepaired(2);
-
-	// ct1.attack("ct2");
-	// ct2.takeDamage(ATTACK_DAMAGE);
-	// ct2.beRepaired(2);
-	// ct2.attack("ct1");
-	// ct1.takeDamage(ATTACK_DAMAGE);
-	// ct1.beRepaired(2);
 }
