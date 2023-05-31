@@ -6,13 +6,13 @@
 #    By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/16 13:12:40 by wxuerui           #+#    #+#              #
-#    Updated: 2023/05/29 14:47:23 by wxuerui          ###   ########.fr        #
+#    Updated: 2023/05/31 11:33:38 by wxuerui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	diamondtrap
 CXX		=	c++
-CXXFLAGS	=	-Wall -Werror -Wextra -Wshadow -Wno-shadow -std=c++98
+CXXFLAGS	=	-Wall -Werror -Wextra -Wshadow -std=c++98
 SRCS	=	$(wildcard *.cpp)
 OBJS	=	$(SRCS:.cpp=.o)
 

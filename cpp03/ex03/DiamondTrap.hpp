@@ -6,7 +6,7 @@
 /*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 14:05:12 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/29 15:28:18 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/31 11:33:19 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,14 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 
 		unsigned int	getAd(void);
 		unsigned int	getEp(void);
+		// int	test(int test) { _test = test; return test; };
 	
 	private:
 		std::string	_name;
 		using FragTrap::_hp;
 		using ScavTrap::_ep;
 		using FragTrap::_ad;
+		// int	_test;
 };
 
 #endif
