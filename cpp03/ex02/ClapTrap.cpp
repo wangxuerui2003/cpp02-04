@@ -6,14 +6,14 @@
 /*   By: wxuerui <wxuerui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 14:18:51 by wxuerui           #+#    #+#             */
-/*   Updated: 2023/05/29 10:19:38 by wxuerui          ###   ########.fr       */
+/*   Updated: 2023/05/31 11:44:03 by wxuerui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "colors.h"
 
-ClapTrap::ClapTrap() {
+ClapTrap::ClapTrap() : _name("default claptrap"), _hp(10), _ep(10), _ad(0) {
 	std::cout << "ClapTrap default constructor called" << std::endl;
 	return;
 }
